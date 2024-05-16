@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/aamosljp/website/static/css/main.e6c13ad2.css",
+    "main.js": "/aamosljp/website/static/js/main.a30f008d.js",
+    "static/js/453.bb828c5d.chunk.js": "/aamosljp/website/static/js/453.bb828c5d.chunk.js",
+    "index.html": "/aamosljp/website/index.html",
+    "main.e6c13ad2.css.map": "/aamosljp/website/static/css/main.e6c13ad2.css.map",
+    "main.a30f008d.js.map": "/aamosljp/website/static/js/main.a30f008d.js.map",
+    "453.bb828c5d.chunk.js.map": "/aamosljp/website/static/js/453.bb828c5d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.a30f008d.js"
+  ]
+}
