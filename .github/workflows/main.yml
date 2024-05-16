@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+      - maini
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu
+    steps:
+      - name: npm build and deploy
+        run: |
+          npm run build
+          npm run deploy
