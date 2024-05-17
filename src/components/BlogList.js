@@ -6,7 +6,7 @@ const BlogList = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:1337/api/blogs').then(response => {
+    axios.get('https://passionate-fruit-347d6d7acb.strapiapp.com/api/blogs').then(response => {
       setPosts(response.data['data']);
     }).catch(error => console.error("Error fetching blog posts: ", error));
   }, []);

@@ -7,7 +7,7 @@ const BlogPost = () => {
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:1337/api/blogs/${id}`).then(response => {
+    axios.get(`https://passionate-fruit-347d6d7acb.strapiapp.com/api/blogs/${id}`).then(response => {
       setPost(response.data['data']);
     }).catch(error => console.error("Error fetching blog post: ", error));
   }, [id]);
