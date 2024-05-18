@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+    {
+        @apply dark:text-blue-200;
+    }
     h1 {
         @apply dark:text-blue-300;
         @apply text-3xl;
@@ -17,12 +20,6 @@
         @apply dark:text-blue-300;
         @apply text-xl;
         @apply font-bold
-    }
-    label {
-        @apply dark:text-blue-200
-    }
-    p {
-        @apply dark:text-blue-200
     }
 }
 
