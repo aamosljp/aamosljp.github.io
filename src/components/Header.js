@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = ({ toggleDarkMode }) => (
     <header className="bg-gray-800 text-white p-4">
-        <h1 className="text-3xl font-bold">Aamos Pernu</h1>
+        <h1>aamosljp</h1>
         <nav className="flex justify-between items-center">
             <Link className="mr-4" to="/">Home</Link>
             <Link className="mr-4" to="/blog">Blog</Link>

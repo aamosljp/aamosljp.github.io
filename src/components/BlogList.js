@@ -13,7 +13,7 @@ const BlogList = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h2 className="dark:text-blue-200 text-2xl font-bold mb-4 transition duration-300">Blog</h2>
+      <h2 className="mb-4 transition duration-300">Blog</h2>
       <ul>
         {posts.map(({ id, attributes }) => (
           <li key={id} className="mb-2">
