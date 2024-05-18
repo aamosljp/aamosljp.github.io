@@ -41,7 +41,7 @@ const Contact = () => {
     };
     return (
         <div className="container mx-auto p-4">
-            <h2 className="dark:text-blue-300 mb-4 transition duration-300">Contact</h2>
+            <h2 className="mb-4">Contact</h2>
             {isSubmitted ? (<div className="flex flex-col space-y-4">
                 <h2>Thank you!</h2>
                 <p>Your message has been sent successfully.</p>
@@ -49,18 +49,18 @@ const Contact = () => {
             ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                        <label className="dark:text-blue-200 block text-gray-700 transition duration-300">Name:</label>
-                        <input type="text" name="name" value={formData.name} onChange={handleChange} required className="rounded dark:border-gray-700 dark:bg-gray-600 w-full border border-gray-300 p-2 transition duration-300" />
+                        <label className="block text-gray-700">Name:</label>
+                        <input type="text" name="name" value={formData.name} onChange={handleChange} required className="rounded w-full border border-gray-300 p-2" />
                     </div>
                     <div>
-                        <label className="dark:text-blue-200 block text-gray-700 transition duration-300">Email:</label>
-                        <input type="email" name="email" value={formData.email} onChange={handleChange} required className="rounded dark:border-gray-700 dark:bg-gray-600 w-full border border-gray-300 p-2 transition duration-300" />
+                        <label className="block text-gray-700">Email:</label>
+                        <input type="email" name="email" value={formData.email} onChange={handleChange} required className="rounded w-full border border-gray-300 p-2" />
                     </div>
                     <div>
-                        <label className="dark:text-blue-200 block text-gray-700 transition duration-300">Message:</label>
-                        <textarea name="message" value={formData.message} onChange={handleChange} className="rounded dark:border-gray-700 dark:bg-gray-600 w-full border border-gray-300 p-2 transition duration-300" />
+                        <label className="block text-gray-700">Message:</label>
+                        <textarea name="message" value={formData.message} onChange={handleChange} className="rounded w-full border border-gray-300 p-2" />
                     </div>
-                    <button type="submit" disabled={isSubmitting} className="rounded dark:bg-blue-800 bg-blue-500 text-white px-4 py-2 transition duration-300">
+                    <button type="submit" disabled={isSubmitting} className="rounded bg-blue-500 text-white px-4 py-2">
                         {isSubmitting ? 'Submitting...' : 'Submit'}
                     </button>
                     {error && <p style={{ color: 'red' }}>{error}</p>}

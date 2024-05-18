@@ -1,28 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import React from "react";
 
-const BlogList = () => {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    axios.get('https://passionate-fruit-347d6d7acb.strapiapp.com/api/blogs').then(response => {
-      setPosts(response.data['data']);
-    }).catch(error => console.error("Error fetching blog posts: ", error));
-  }, []);
-
-  return (
-    <div className="container mx-auto p-4">
-      <h2 className="mb-4 transition duration-300">Blog</h2>
-      <ul>
-        {posts.map(({ id, attributes }) => (
-          <li key={id} className="mb-2">
-            <Link className="text-blue-500 hover:underline" to={`/blog/${id}`}>{attributes.title}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+const BlogList = ({ blogs, onSelectBlog, selectedBlog }) => {
+    return (
+        <div className="container min-h-screen max-w-xs border-r-2 border-gray-300">
+            <h2 className="p-4 mb-4 transition duration-300">Blog</h2>
+            <ul>
+                {blogs.map((blog) => (
+                    selectedBlog?.id === blog.id ? (
+                        <button key={blog.id} className="text-left mb-2 p-2 bg-gray-300" style={{width: '100%'}}>
+                            {blog.attributes.title}
+                        </button>
+                    ) : (
+                        <button key={blog.id} onClick={() => onSelectBlog(blog)} className="text-left mb-2 p-2">
+                            {blog.attributes.title}
+                        </button>
+                    )
+                ))}
+            </ul>
+        </div >
+    );
 };
 
 export default BlogList;

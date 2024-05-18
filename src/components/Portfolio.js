@@ -32,13 +32,13 @@ const Portfolio = () => {
 
     return (
         <div className="container mx-auto p-4">
-            <h2 className="mb-4 transition duration-300">Portfolio</h2>
+            <h2 className="mb-4">Portfolio</h2>
             <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project, index) => (
-                    <Link key={index} to={`/projects/${project.name}`} className="dark:bg-gray-600 bg-blue-100 rounded-lg overflow-hidden shadow-md dark:hover:bg-gray-700 hover:bg-blue-200 transition duration-300">
+                    <Link key={index} to={project.link} className="bg-blue-100 rounded-lg overflow-hidden shadow-md hover:bg-blue-200">
                         <div className="p-4">
-                            <h3 className="mb-2 transition duration-300">{project.name}</h3>
-                            <p className="dark:text-blue-200 text-gray-700 transition duration-300">{project.description}</p>
+                            <h3 className="mb-2">{project.name}</h3>
+                            <p className="text-gray-700">{project.description}</p>
                         </div>
                     </Link>
                 ))}
